@@ -11,9 +11,17 @@ class NewsDto {
     data class Request(@SerializedName("id") val id: Int) : Parcelable
 
     @Parcelize
-    data class Response(@SerializedName("id") val id: Int) : Parcelable
+    data class Response(
+        @SerializedName("id") val id: Int,
+        @SerializedName("title") val title: String,
+        @SerializedName("body") val body: String
+    ) : Parcelable
 }
 
 internal fun NewsDto.Response.toDomain(): News {
-    return News(this.id)
+    return News(
+        id = this.id,
+        title = this.title,
+        body = this.body,
+    )
 }

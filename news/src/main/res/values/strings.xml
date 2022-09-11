@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_db">FromDb</string>
+    <string name="label_net">FromNet</string>
+    <string name="error_title">Произошла ошибка</string>
+    <string name="error_button">Попбробовать снова?</string>
+</resources>

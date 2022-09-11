@@ -1,3 +1,17 @@
-{
-  "id": 4
-}
+[
+  {
+    "id": 1,
+    "title": "Message Title №1",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. \n"
+  },
+  {
+    "id": 2,
+    "title": "Message Title №2",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. \n"
+  },
+  {
+    "id": 3,
+    "title": "Message Title №3",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. \n"
+  }
+]

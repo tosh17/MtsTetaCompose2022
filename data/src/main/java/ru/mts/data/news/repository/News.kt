@@ -1,3 +1,7 @@
 package ru.mts.data.news.repository
 
-data class News(val id: Int)
+data class News(
+    val id: Int,
+    val title: String,
+    val body: String,
+)

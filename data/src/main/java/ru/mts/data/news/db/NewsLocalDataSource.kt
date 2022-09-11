@@ -9,12 +9,24 @@ import ru.mts.data.utils.Result
 import ru.mts.data.utils.runOperationCatching
 
 class NewsLocalDataSource(private val context: Context) {
-    suspend fun getNews(): Result<NewsEntity, Throwable> {
+    suspend fun getNews(): Result<List<NewsEntity>, Throwable> {
         return runOperationCatching {
-            delay(1000L)
+            delay(500L)
             withContext(Dispatchers.IO) {
-                AppDatabase.getDatabase(context).newsDao().getById(1) ?: NewsEntity(2)
+                AppDatabase.getDatabase(context).newsDao().getAll()
             }
+        }
+    }
+
+    suspend fun save(news: NewsEntity) {
+        withContext(Dispatchers.IO) {
+            AppDatabase.getDatabase(context).newsDao().insert(news)
+        }
+    }
+
+    suspend fun saveAll(news: List<NewsEntity>) {
+        withContext(Dispatchers.IO) {
+            AppDatabase.getDatabase(context).newsDao().insertAll(news)
         }
     }
 }
